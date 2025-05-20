@@ -23,17 +23,17 @@ const adminRouter = require('./Routes/adminRouter.js');
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: "*" }));
+app.use(cors({ 
+  origin: "*" || "https://vb-xi-nine.vercel.app",
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+}));
 app.use("/videos", express.static(path.join(__dirname, "videos")));
 app.use("/videos/audio", express.static(path.join(__dirname, "videos", "audio")));
 app.use("/api", userRouter);
 app.use("/api/admin", adminRouter);
-app.use(cors({ origin: "*" }));
 app.use("/rating",ratingRoutes)
 
-app.use(cors({
-  origin: '*'
-}));
 
 
 // Ensure API keys are set
