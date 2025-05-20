@@ -18,9 +18,9 @@ const ORIENTATIONS = [
 ];
 
 const VIDEO_LENGTHS = [
-  { id: "short", name: "Short", description: "less than 30 seconds", icon: "⏱️" },
-  { id: "medium", name: "Medium", description: "30s-1 min", icon: "⏲️" },
-  { id: "long", name: "Long", description: "more than 1 min", icon: "🕰️" }
+  { id: "short", name: "Short", description: "~2 seconds per caption", icon: "⏱️" },
+  { id: "medium", name: "Medium", description: "~2.5 seconds per caption", icon: "⏲️" },
+  { id: "long", name: "Long", description: "~3 seconds per caption", icon: "🕰️" }
 ];
 
 // Animation variants
